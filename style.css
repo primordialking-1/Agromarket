@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* ===== RESET ===== */
 *{
     margin:0;
@@ -663,10 +665,11 @@ footer{
 
 
 /* cart2 */
-.cart{
+/* .cart{
     position: fixed;
     top: 0;
-    right: -400px;
+    left: 0;
+    right:-400px;
     width: 350px;
     height: 100%;
     background: white;
@@ -693,7 +696,88 @@ footer{
     width: 100%;
     border: none;
     margin-top: 15px;
+} */
+
+/* OVERLAY */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 998;
 }
+
+/* SIDEBAR */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    transition: right 0.4s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ACTIVE STATE */
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-overlay.active {
+    display: block;
+}
+
+/* HEADER */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #2e7d32;
+    color: white;
+}
+
+.close-cart {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* CART ITEMS */
+.cartItems {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.cart-footer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 
 /* Modal */
 .modal{
@@ -930,6 +1014,84 @@ footer{
 .tab2 a:active{
     color: green;
     background-color: black;
+}
+
+/* bottombar like app */
+.bottom{
+  background: none;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Container */
+.nav-container {
+  background: none;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Navbar */
+.nav222 {
+  position: fixed;
+  background: #484948;
+  padding: 10px;
+  margin-left: 7px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+
+
+  bottom: 0;
+  margin-bottom: 0px;
+  left: 0;
+  display: flex;
+}
+
+/* Items */
+.nav-item {
+  position: relative;
+  z-index: 2;
+  color: #aaa;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.nav-item span {
+  display: none;
+  font-size: 14px;
+}
+
+/* Active item */
+.nav-item.active {
+  color: #000;
+}
+
+.nav-item.active span {
+  display: inline;
+}
+
+/* Indicator (pill) */
+.indicator {
+  position: absolute;
+  height: 45px;
+  width: 80px;
+  background: white;
+  border-radius: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  transition: 0.3s ease;
+  z-index: 1;
 }
 
 /* see more order */

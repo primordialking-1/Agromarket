@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- FONT AWESOME FOR ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="prod">
     <div class="hhhh">
@@ -18,20 +19,40 @@
     </div>
 
     <div class="carts"><a href="">
-        <i id="Cart" onclick="toggleCart()" class="fa fa-shopping-cart" aria-hidden="true">
+        <i id="Cart" class="fa fa-shopping-cart" aria-hidden="true">
             <span class="cart-count" id="cartCount">0</span>
         </i>
     </a>
     </div>
     </div>
    
-    <!-- CART -->
+    <!-- CART
      <div class="cart" id="cart">
         <h2>your Cart</h2>
         <div class="cartItems"></div>
         <h3>Total: $<span id="total">0</span></h3>
         <button class="checkout-btn" onclick="checkout()">checkout</button>
-     </div>
+     </div> -->
+
+     <!-- OVERLAY -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- RIGHT SIDEBAR CART -->
+<div class="cart-sidebar" id="cart">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <i class="fa fa-times close-cart" id="closeCart"></i>
+    </div>
+
+    <div class="cartItems"></div>
+
+    <div class="cart-footer">
+        <h3>Total: ₦<span id="total">0</span></h3>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+
 
      <!-- MODAL -->
       <div class="modal" id="modal">
@@ -99,7 +120,9 @@
         </label>
     </div>
 
-    <!-- Price Range -->
+   
+
+    <!-- Price Range
     <div class="filter-section">
         <h3>Price Range</h3>
 
@@ -112,7 +135,45 @@
 
         <p class="reset">Reset</p>
     </div>
+     -->
+</div>
+
+     <div class="bottom">
+
+<div class="nav-container">
+  <div class="nav222">
     
+    <div class="nav-item active">
+      <i class="fa fa-home"></i>
+      <span>Home</span>
+    </div>
+
+    <div class="nav-item">
+      <i class="fa fa-search"></i>
+      <span>Search</span>
+    </div>
+
+    <div class="nav-item">
+      <i class="fa fa-tag"></i>
+      <span>Offers</span>
+    </div>
+
+    <div class="nav-item">
+      <i class="fa fa-shopping-basket"></i>
+      <span>Cart</span>
+    </div>
+
+    <div class="nav-item">
+      <i class="fa fa-user"></i>
+      <span>Profile</span>
+    </div>
+
+    <!-- Sliding pill -->
+    <div class="indicator"></div>
+
+  </div>
+</div>
+
 </div>
 
     <!-- PRODUCTS -->
@@ -202,9 +263,17 @@
         <li class="tab2"><a href="">></a></li>
     </ul>
 </div>
+<br>
+<br>
+<br>
 
-<footer>
+
+<!-- <footer>
     © 2026 AgroMart — Empowering Farmers & Buyers
-</footer>
+</footer> -->
+
+
+
+<script src="agro.js"></script>
 </body>
 </html>
