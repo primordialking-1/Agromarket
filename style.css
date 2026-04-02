@@ -1051,6 +1051,15 @@ footer{
   display: flex;
 }
 
+.nav222 a{
+    text-decoration: none;
+    color: black;
+}
+ 
+.nav222 i.active {
+    color: black;
+}
+
 /* Items */
 .nav-item {
   position: relative;
@@ -1247,6 +1256,11 @@ footer{
     font-weight: 600;
     font-size: 17px;
     transition:0.1s ease-in;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: auto auto;
 }
     }
 
