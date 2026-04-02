@@ -186,20 +186,21 @@ const cartIcon = document.getElementById("Cart");
 const closeCartBtn = document.getElementById("closeCart");
 
 // OPEN CART
-cartIcon.addEventListener("click",
-     function () {
+cartIcon.addEventListener("click", () => {
     cartSidebar.classList.add("active");
     overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
 });
 
 // CLOSE CART
 function closeCart() {
     cartSidebar.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.style.overflow = "auto";
 }
 
-overlay.addEventListener("click", closeCart);
 closeCartBtn.addEventListener("click", closeCart);
+overlay.addEventListener("click", closeCart);
 
 
 // bottom nav
@@ -221,6 +222,19 @@ items.forEach((item, index) => {
     indicator.style.left = (item.offsetLeft) + "px";
 
   });
+
+  //get current page
+    const currentPage = window.location.pathname.split("/").pop();
+
+    //loop through the nan link
+    document.querySelectorAll(".nav-item").forEach
+    (link => {
+        const linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage){
+            link.classList.add("active");
+        }
+    });
 });
 
 
