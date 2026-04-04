@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroMarket Auth</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body class="sign">
+
+<div class="auth-container">
+
+  <!-- LEFT SIDE (Branding) -->
+  <div class="auth-left">
+    <h1>🌿 AgroMarket</h1>
+    <p>Connecting Farmers to Buyers</p>
+  </div>
+
+  <!-- RIGHT SIDE (Form) -->
+  <div class="auth-right">
+
+    <!-- Toggle -->
+    <div class="toggle">
+      <button id="loginBtttn" class="active">Login</button>
+      <button id="signupBtttn">Sign Up</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm" class="form active">
+      <h2>Welcome Back 👋</h2>
+
+      <div class="input-box">
+        <i class="fa fa-envelope"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <button class="btn">Login</button>
+
+      <div class="social">
+        <p>Or login with</p>
+        <div class="social-icons">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+      </div>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signupForm" class="form">
+      <h2>Create Account 🌱</h2>
+
+      <div class="input-box">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder="Full Name" required>
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-envelope"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="input-box">
+        <i class="fa fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <button class="btn">Sign Up</button>
+
+      <div class="social">
+        <p>Or sign up with</p>
+        <div class="social-icons">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<div class="bottom">
+
+<div class="nav-container">
+  <div class="nav222">
+    
+    <div class="nav-item active">
+        <a href="product.html">
+      <i class="fa fa-home"></i>
+      <span>Home</span></a>
+    </div>
+
+    <div class="nav-item">
+        <a href="chat.html">
+      <i class="fa fa-globe"></i>
+      <span>chat</span></a>
+    </div>
+
+    <div class="nav-item">
+      <i class="fa fa-tag"></i>
+      <span>Offers</span>
+    </div>
+
+    <div class="nav-item">
+      <i class="fa fa-shopping-basket"></i>
+      <span>Cart</span>
+    </div>
+
+    <div class="nav-item"><a href="sign.html">
+      <i class="fa fa-user"></i>
+      <span>Profile</span></a>
+    </div>
+
+    <!-- Sliding pill -->
+    <div class="indicator"></div>
+
+  </div>
+</div>
+
+<script src="special.js"></script>
+</body>
+</html>

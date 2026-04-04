@@ -7,6 +7,8 @@ function showSidebar(){
         sidebar.style.display = 'none'
     }
 
+
+
 // let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // const cartItems = document.getElementById("cartItems");
@@ -223,18 +225,16 @@ items.forEach((item, index) => {
 
   });
 
-  //get current page
-    const currentPage = window.location.pathname.split("/").pop();
+//   //get current page
+//     const currentPage = window.location.pathname.split("/").pop();
 
-    //loop through the nan link
-    document.querySelectorAll(".nav-item").forEach
-    (link => {
-        const linkPage = link.getAttribute("href");
+//     //loop through the nan link
+//     document.querySelectorAll(".nav-item").forEach
+//     (link => {
+//         const linkPage = link.getAttribute("href");
 
-        if (linkPage === currentPage){
-            link.classList.add("active");
-        }
-    });
+//         if (linkPage === currentPage){
+//             link.classList.add("active");
+//         }
+//     });
 });
-
-
