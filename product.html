@@ -142,13 +142,38 @@
         <h2>All Product</h2>
 
         <div class="product-grid">
-            <div class="product1">
+
+            <div class="product1"
+            onclick="openProduct(this)"
+             data-name="Maize"
+             data-price="₦25,000"
+             data-desc="fresh maize seed directly from the farm"
+             data-img="images/maize.jpg">
+
                 <img src="images/maize.jpg">
                 <h3>Maize</h3>
                 <p class="price">₦25,000<p>
                 <!-- <input type="number" min="1" value="1" id="qty${p.id}">
                 <button onclick="addToCart()" class="add">Add to Cart</button> -->
             </div>
+
+               <!-- SLIDE-PANEL -->
+             <div class="product-page" id="productPage">
+                
+                <div class="page-header">
+                    <button onclick="closeProduct()"> [- Back 
+                    </button>
+                </div>
+
+                <div class="page-content">
+                    <img id="pImg">
+                    <h2 id="pName"></h2>
+                    <h3 id="pPrice"></h3>
+                    <p id="pDesc"></p>
+                    <button class="cart-btn">Add to cart</button>
+                </div>
+             </div>
+
 
             <div class="product1">
                 <img src="images/tomatoes.jpg">
@@ -173,6 +198,7 @@
                 <!-- <input type="number" min="1" value="1" id="qty${p.id}">
                 <button onclick="addToCart()" class="add">Add to Cart</button> -->
             </div>
+
         </div>
 
         <div class="product-grid2">
@@ -267,13 +293,8 @@
 
 </div>
 
-
-<!-- <footer>
-    © 2026 AgroMart — Empowering Farmers & Buyers
-</footer> -->
-
-
-
-<script src="agro.js"></script>
+<script src="agro.js">
+    
+</script>
 </body>
 </html>

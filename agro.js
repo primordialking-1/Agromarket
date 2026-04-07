@@ -238,3 +238,19 @@ items.forEach((item, index) => {
 //         }
 //     });
 });
+
+
+// for opening the product to a large place
+
+function openProduct(card){
+
+    document.getElementById("productPage").classList.add("active");
+    document.getElementById("pName").innerText = card.dataset.name;
+    document.getElementById("pPrice").innerText = card.dataset.price;
+    document.getElementById("pDesc").innerText = card.dataset.desc;
+    document.getElementById("pImg").src = card.dataset.img;
+}
+
+function closeProduct(){
+    document.getElementById("productPage").classList.remove("active");
+}

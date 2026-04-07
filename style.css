@@ -934,12 +934,16 @@ footer{
 .product1{
     margin-left: 10px;
     background:#02861e;
-    padding:15px;
+    padding:10px;
+    border: 1px solid;
     border-radius:8px;
     box-shadow:0 4px 8px rgba(0,0,0,0.1);
     text-align:flex-start;
-    overflow-y: none;
-    height: 60%;
+    height: 90%;
+}
+
+.product1:hover{
+    background-color: #02861e;
 }
 
 .product1 input{
@@ -954,7 +958,7 @@ footer{
 }
 
 .product1 h3{
-    padding-top: 12px;
+    padding-top: 10px;
     margin:12px 0 5px;
     font-weight: 200;
     font-size: 16px;
@@ -984,6 +988,57 @@ footer{
 
 .product1 button:hover{
     background:#1b5e20;
+}
+
+/* product upon up to page */
+.product-page{
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 999;
+    transition: 0.4s ease;
+    overflow-y: auto;
+}
+
+.product-page.active{
+    bottom: 0;
+}
+
+/* HEADER */
+.page-header button{
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+
+
+/*CONTENT */
+.page-content{
+    padding: 15px;
+}
+
+.page-content img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#pPrice{
+    color: green;
+}
+
+/* BUTTON */
+.cart-btn{
+    width: 100%;
+    padding: 15px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 /* productgrid2 */
@@ -1465,11 +1520,17 @@ footer{
     margin-left: 13px;
 }
 
+
 .product1{
     margin-left: 2px;
     width: 150px;
     margin-bottom: 10px;
 }
+
+.product1:hover{
+    background-color: rgb(105, 92, 76);
+}
+
 
 .product1 img{
     width:100%;

@@ -89,3 +89,4 @@ window.addEventListener("load", () => {
     navItems[2]?.classList.add("active");
   }
 });
+
