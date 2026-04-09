@@ -78,26 +78,58 @@ const modal = document.getElementById("modal");
 // }
 
 // ADD TO CART
+// function addToCart(button) {
+
+//     const productCard = button.closest(".product1");
+//     const name = productCard.querySelector("h3").innerText;
+//     const priceText = productCard.querySelector(".price").innerText;
+//     const qtyInput = productCard.querySelector("input");
+//     const quantity = parseInt(qtyInput.value);
+
+//     const price = parseInt(priceText.replace(/[^\d]/g, ""));
+
+//     const existingItem = cart.find(item => item.name === name);
+
+//     if (existingItem) {
+//         existingItem.quantity += quantity;
+//     } else {
+//         cart.push({
+//             name,
+//             price,
+//             quantity
+//         });
+//     }
+
+//     updateCart();
+// }
 function addToCart(button) {
 
-    const productCard = button.closest(".product1");
-    const name = productCard.querySelector("h3").innerText;
-    const priceText = productCard.querySelector(".price").innerText;
-    const qtyInput = productCard.querySelector("input");
-    const quantity = parseInt(qtyInput.value);
+    let productCard = button.closest(".product1");
 
-    const price = parseInt(priceText.replace(/[^\d]/g, ""));
+    // ✅ If not found, fallback to expanded modal
+    if (!productCard) {
+        productCard = button.closest(".modal") || document;
+    }
+
+    const nameEl = productCard.querySelector("h3");
+    const priceEl = productCard.querySelector(".price");
+    const qtyInput = productCard.querySelector("input");
+
+    if (!nameEl || !priceEl) {
+        console.error("Product elements not found");
+        return;
+    }
+
+    const name = nameEl.innerText;
+    const price = parseInt(priceEl.innerText.replace(/[^\d]/g, "")) || 0;
+    const quantity = qtyInput ? parseInt(qtyInput.value) : 1;
 
     const existingItem = cart.find(item => item.name === name);
 
     if (existingItem) {
         existingItem.quantity += quantity;
     } else {
-        cart.push({
-            name,
-            price,
-            quantity
-        });
+        cart.push({ name, price, quantity });
     }
 
     updateCart();
