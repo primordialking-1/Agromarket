@@ -79,7 +79,7 @@
     <h2 class="filter-title">Filters</h2>
         <!-- buy and sell -->
      <div class="sells">
-        <div class="sell"><a href="">sell</a></div>
+        <div class="sell"><a href="sell.html">sell</a></div>
         <div class="sell"><a href="">buy</a></div>
     </div>
 
@@ -166,10 +166,12 @@
                 </div>
 
                 <div class="page-content">
+                    <!-- <p class="details">Product Details</p> -->
                     <img id="pImg">
                     <h2 id="pName"></h2>
                     <h3 id="pPrice"></h3>
                     <p id="pDesc"></p>
+                    <p id="pRat"></p>
                     <input type="number" min="1" value="1" id="qty${p.id}"><br>
                     <button onclick="addToCart(this)" class="add">Add to cart</button>
                 </div>
@@ -181,8 +183,9 @@
              data-name="Tomatoes"
              data-price="₦5,500"
              data-desc="fresh Tomatoes directly from the farm"
-             data-img="images/tomatoes.jpg">
-            >
+             data-img="images/tomatoes.jpg"
+             data-rating="5.4">
+          
                 <img src="images/tomatoes.jpg">
                 <h3>Tomatoes</h3>
               <p class="price">₦5,500</p>

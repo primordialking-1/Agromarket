@@ -281,6 +281,7 @@ function openProduct(card){
     document.getElementById("pPrice").innerText = card.dataset.price;
     document.getElementById("pDesc").innerText = card.dataset.desc;
     document.getElementById("pImg").src = card.dataset.img;
+    document.getElementById("pRat").innerText = card.dataset.rating;
 }
 
 function closeProduct(){
